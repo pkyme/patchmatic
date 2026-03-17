@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Patchmatic/Media.xcassets/AppIcon.appiconset/128.png" width="96" alt="Patchmatic icon">
+  <img src="Icon.png" width="96" alt="Patchmatic icon">
 </p>
 
 <h1 align="center">Patchmatic</h1>
@@ -38,7 +38,7 @@ Patchmatic is MacOS application for recording your Eurorack patches, a bit like 
 
 ![Module editor](screenshots/module_editor.jpeg)
 
-![Sets mode](screenshots/sets_mode.jpeg)
+![Sets mode](screenshots/set_mode.jpeg)
 
 ---
 
