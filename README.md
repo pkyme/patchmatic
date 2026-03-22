@@ -71,3 +71,9 @@ Patchmatic is MacOS application for recording your Eurorack patches, a bit like 
 2. **Build a rack** — create a case, add rows, place modules at HP positions
 3. **Patch** — switch to Patches mode, drag cables between patch points
 4. **Save presets** — each patch stores cable layout and all control positions independently
+
+---
+
+## Acknowledgements
+
+Patchmatic uses [ONNX Runtime](https://onnxruntime.ai/) for on-device model inference and [RF-DETR](https://github.com/roboflow/rf-detr) for the control detection model. Licenses for both are included in the application.
