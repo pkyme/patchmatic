@@ -20,8 +20,8 @@
 
 | Shortcut | Action |
 |---|---|
-| Cmd+N | New module |
-| Cmd+Shift+I | New module from image |
+| Cmd+N | New module from image |
+| Cmd+Shift+N | New blank module |
 | Cmd+D | Duplicate module (library) / duplicate selected controls (canvas) |
 | Delete | Delete selected module(s) (library) / delete selected control(s) (canvas) |
 | Cmd+Shift+A | Analyse background image |

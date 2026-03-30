@@ -4,13 +4,13 @@ The Module Editor is where you define the layout of individual Eurorack modules.
 
 ## Creating a module from a photo
 
-Click the **camera** icon button in the library toolbar, or drag an image file onto the library (supported formats: PNG, JPEG, TIFF, HEIC). You can also use **File > New Module from Image** (Cmd+Shift+I).
+Click the **camera** icon button in the library toolbar, or drag an image file onto the library (supported formats: PNG, JPEG, TIFF, HEIC). You can also use **Modules > New Module from Image** (Cmd+N).
 
 Patchmatic creates a new module, sets the photo as the background image, and prompts you to run automatic control detection. The ML model identifies knobs, patch points, toggle switches, buttons, and sliders and places them on the panel, and estimates the module's format (1U or 3U) and width in HP.
 
 Review the results after detection — some controls may be missed or misclassified. Adjust, delete, or add controls as needed. To re-run detection at any time, click the **Analyse Background Image** button (cpu icon) in the canvas toolbar, or use Cmd+Shift+A.
 
-To create a blank module instead, click the **+** button or use Cmd+N.
+To create a blank module instead, click the **+** button or use Cmd+Shift+N.
 
 ## Module properties
 
