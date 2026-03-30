@@ -1,3 +1,5 @@
+<p align="center"><img src="Icon.png" width="96" alt="Patchmatic icon"></p>
+
 # Patchmatic
 
 Patchmatic is a macOS application for recording your Eurorack patches — a mix of Modulargrid and VCV Rack without the audio. The name comes from "Patch Schematic"; the original idea was a tool for creating easy-to-read schematics to enable efficient repatching.
