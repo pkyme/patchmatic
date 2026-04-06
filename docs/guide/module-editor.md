@@ -34,7 +34,7 @@ Select a control type from the canvas toolbar to enter placement mode, then clic
 Select a control to edit its properties in the inspector:
 
 - **Size** — small, medium, large, or extra large (not applicable to patch points, which are always medium)
-- **Orientation** — vertical or horizontal (toggle switches only)
+- **Orientation** — vertical or horizontal (toggle switches and sliders)
 - **Label** — position (above, below, left, right, or off), font size, and offset
 - **State Label** — separate label position settings for the state indicator (buttons and toggle switches)
 - **States** — named states for buttons and toggle switches (e.g. "Off", "On"); minimum 2, no maximum
@@ -58,6 +58,16 @@ When two or more controls are selected, the inspector shows batch editing option
 | Delete | Remove selected controls |
 | Arrow keys | Nudge selected controls 0.5 pt |
 | Shift+Arrow keys | Nudge 5 pt |
+
+## Resizing controls
+
+Screen and slider controls can be resized by dragging a handle on their selection highlight:
+
+| Control | Handle location | Resizes |
+|---|---|---|
+| Screen | Bottom-right corner | Width and height |
+| Horizontal slider | Right edge | Length |
+| Vertical slider | Bottom edge | Length |
 
 ## Alignment and layout tools
 

@@ -22,6 +22,7 @@
 |---|---|
 | Cmd+N | New module from image |
 | Cmd+Shift+N | New blank module |
+| Cmd+R | Rename module |
 | Cmd+D | Duplicate module (library) / duplicate selected controls (canvas) |
 | Delete | Delete selected module(s) (library) / delete selected control(s) (canvas) |
 | Cmd+Shift+A | Analyse background image |
@@ -34,6 +35,7 @@
 | Shortcut | Action |
 |---|---|
 | Cmd+N | New rack |
+| Cmd+R | Rename rack |
 | Cmd+Shift+C | New case |
 | Cmd+D | Duplicate rack |
 | Cmd+A | Select all modules |
@@ -44,6 +46,7 @@
 
 | Shortcut | Action |
 |---|---|
+| Cmd+R | Rename patch |
 | Cmd+D | Duplicate patch |
 | Delete | Delete selected cables or pin |
 | Cmd+Click cable | Insert cable pin at click location |
@@ -53,5 +56,6 @@
 | Shortcut | Action |
 |---|---|
 | Cmd+N | New set |
+| Cmd+R | Rename set |
 | Left Arrow / Cmd+← | Previous patch in set |
 | Right Arrow / Cmd+→ | Next patch in set |
