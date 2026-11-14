@@ -42,15 +42,17 @@ Patchmatic is MacOS application for recording your Eurorack patches, a bit like 
 
 ## Screenshots
 
-![Patch editor](screenshots/patch_editor.png)
+![Patch editor](docs/images/patch-editor/overview.webp)
 
-![Module editor](screenshots/module_editor.png)
+![Module editor](docs/images/module-editor/overview.webp)
 
-![Rack editor](screenshots/rack_editor.png)
+![Rack editor](docs/images/rack-editor/overview.webp)
 
-![Sets mode](screenshots/sets_mode.png)
+![Sets mode](docs/images/sets/overview.webp)
 
-![PDF export](screenshots/pdf_export.png)
+![PDF export](docs/images/export/pdf.webp)
+
+![iPad](docs/images/ipad/fullscreen.webp)
 
 ---
 

@@ -1,100 +1,176 @@
 # Patch Editor
 
-A patch is a snapshot of a rack: it stores cable connections, control positions, notes, and other state independently from every other patch on the same rack. You can have as many patches per rack as you like.
+A patch is a snapshot of a rack: it stores cable connections, control positions, notes, groups, and screen images independently from every other patch on the same rack. You can have as many patches per rack as you like.
 
-## Creating a patch
+<figure markdown="span">
+  ![Patch Editor showing a patched rack with colored cables and the patch notes overlay](../images/patch-editor/overview.webp)
+</figure>
 
-In **Patches** mode, click **+** in the patch list. A submenu lists all racks — click a rack name to create a patch for it. The patch opens showing the rack layout.
+## Toolbar
 
-## Duplicating and deleting patches
-
-**Cmd+D** (or **Duplicate** in the patch list context menu) creates a copy of the patch, including cables, control values, screen images, notes, groups, patch notes, and audio.
-
-To delete a patch, use **Patches > Delete Patch…** or **Delete…** in the patch list context menu. A confirmation is shown first, noting if the patch will also be removed from any sets. Deletion can be undone with **Edit > Undo**, which restores the patch and its set membership.
-
-## Drawing cables
-
-Drag from a patch point to another patch point to create a cable. A preview cable is shown while dragging. The cable is created when you release over a valid target. Colors are auto-assigned from the 24-color palette in round-robin order.
-
-To change a cable's color, right-click the cable and select **Change Color**, then pick from the color grid.
-
-## Selecting and deleting cables
-
-- Right-click a cable to select it and show its context menu
-- Shift+Click a cable to add it to or remove it from the selection
-- Shift+Drag to draw a marquee; every cable it touches is added to the selection (when the Groups toggle is off)
-- Right-click a patch point to select all cables connected to it
-- Delete selected cables with the Delete key or via the context menu
-
-The canvas context menu also has a **Delete Cable** submenu listing every cable by its endpoints, in the form "Module Jack → Module Jack". A patch point without a label is shown by its sequence number.
-
-## Copying and pasting cables
-
-Copy selected cables with **Cmd+C**, **Copy Selected Cables** in the cable context menu, or **Patches > Copy Cables**. Paste them with **Cmd+V**, **Paste Cables** in the canvas or cable context menu, or **Patches > Paste Cables**.
-
-Cables can only be pasted into a patch on the same rack they were copied from. Pasted cables become the selection. Cables whose modules are no longer in the rack, or that duplicate an existing connection, are skipped.
-
-## Routing cables with pins
-
-Pins are intermediate waypoints that redirect cable routing.
-
-- **Cmd+Click** on a cable to insert a pin at that location
-- Drag a pin to reposition it
-- Right-click a pin and select **Delete Cable Pin** to remove it, or select it and press Delete
-
-Pins attached to a case move with the case when it is repositioned.
-
-## Control interaction
-
-**Knobs** — drag vertically to adjust (up increases, down decreases).
-
-**Sliders** — drag along the slider axis.
-
-**Toggle switches and buttons** — click to advance to the next state, cycling through all named states.
-
-**Screens** — hover over a screen to reveal a toolbar:
-- **+** — attach an image. By default the whole image is used. Check **Crop Image** to show a crop rectangle, and **Lock Aspect Ratio** to constrain it to the screen's aspect ratio.
-- **← / →** — cycle through multiple attached images
-- **Magnifier** — zoom the current image
-- **✕** — delete the current image
-
-All control values are stored per patch and restored when you switch back to a patch.
-
-## Module notes
-
-**Patch point notes** — right-click while hovering a patch point to add or edit a short text note. Notes appear as indicators on the module panel; hover to read them.
-
-**General module notes** — right-click on the module body (not over a patch point) and select **Add Note** to place a free-form text note on the panel.
-
-Both types of notes are stored per patch.
-
-## Groups
-
-Groups are named overlays that color-highlight sets of modules for organizational purposes. Click the **Groups** toolbar toggle to show or hide group overlays and the floating group list.
-
-- **Create a group** — right-click a module and select **New Group with [name]**. To include multiple modules, select them first, then right-click.
-- **Add / remove modules** — right-click a module and use **Add to Group** or **Remove from Group**
-- **Hover a group card** — highlights that group's modules and fades others
-- **Click a group card** — animates the canvas to fit all modules in the group
-- **Right-click a group card** — rename, edit notes, or delete the group
-
-## Patch notes
-
-Each patch has a free-form text field and an optional audio file attachment.
-
-Open the patch notes sheet from the **Patches** menu, the canvas context menu (**Patch Notes…**), or by clicking the patch notes overlay on the canvas (visible when the **Notes** toolbar toggle is on). The overlay shows the first line of patch notes and an audio icon if an audio file is attached.
-
-## Toolbar toggles
+<figure markdown="span">
+  ![Patches toolbar](../images/patch-editor/toolbar.png){ width="480" .strip }
+</figure>
 
 | Toggle | Action |
 |---|---|
 | Labels | Show or hide control labels |
-| Groups | Show or hide group overlays |
+| Groups | Show or hide group overlays and the group list |
 | Numbers | Show or hide patch point sequence numbers |
 | Notes | Show or hide the patch notes overlay |
+
+The toolbar also has zoom in, zoom out, frame to fit, and the module image opacity slider.
+
+## Creating, duplicating, and deleting patches
+
+Click **+** in the patch list, or use **Patches > New Patch**, and choose a rack from the submenu.
+
+Right-click a patch in the list for **Rename**, **Patch Notes…**, **Duplicate**, and **Delete…**. Duplicating (Cmd+D) copies the cables, control values, screen images, notes, groups, patch notes, and audio.
+
+<div class="grid" markdown>
+
+<figure markdown="span">
+  ![Patch list context menu](../images/patch-editor/list_menu.png){ width="240" }
+</figure>
+
+<figure markdown="span">
+  ![Delete patch confirmation](../images/patch-editor/delete_confirm.png){ width="290" }
+</figure>
+
+</div>
+
+Deleting a patch asks for confirmation, and warns if the patch will also be removed from any sets. Deletion can be undone with **Edit > Undo**, which restores the patch and its place in each set.
+
+## Drawing cables
+
+Drag from one patch point to another. A preview cable follows the pointer, and the cable is created when you release over a valid patch point. Colors are assigned automatically from a 24-color palette in rotation.
+
+To change a cable's color, right-click it and choose **Change Color**.
+
+<figure markdown="span">
+  ![Cable context menu with the Change Color palette](../images/patch-editor/cable_menu.webp)
+  <figcaption>Right-clicking a cable selects it and opens its menu.</figcaption>
+</figure>
+
+## Selecting cables
+
+- Right-click a cable to select it and show its context menu
+- Shift+Click a cable to add it to or remove it from the selection
+- Shift+Drag to draw a marquee; every cable it touches is added to the selection (when the Groups toggle is off)
+- Right-click a patched patch point to select all of its cables and show the cable menu
+
+<figure markdown="span">
+  ![Shift-drag marquee selecting the cables in the top row](../images/patch-editor/cable_marquee.webp)
+  <figcaption>Shift+Drag selects every cable the rectangle touches.</figcaption>
+</figure>
+
+## Deleting cables
+
+Delete the selected cables with the Delete key or **Delete Selected Cables** in the cable menu.
+
+The canvas context menu also has a **Delete Cable** submenu listing every cable by its endpoints, in the form "Module Jack → Module Jack". A patch point without a label is shown by its sequence number.
+
+<figure markdown="span">
+  ![Delete Cable submenu listing cables by endpoint](../images/patch-editor/delete_cable_menu.webp){ width="430" }
+</figure>
+
+## Copying and pasting cables
+
+Copy the selected cables with **Cmd+C**, **Copy Selected Cables** in the cable menu, or **Patches > Copy Cables**. Paste with **Cmd+V**, **Paste Cables** in the canvas or cable menu, or **Patches > Paste Cables**.
+
+<figure markdown="span">
+  ![Patches menu](../images/patch-editor/menu.webp){ width="370" }
+</figure>
+
+Cables can only be pasted into a patch on the rack they were copied from. Pasted cables become the selection. Cables whose modules are no longer in the rack, or that duplicate an existing connection, are skipped.
+
+## Routing cables with pins
+
+Pins are waypoints that redirect a cable's path.
+
+- **Cmd+Click** a cable, or choose **Add Cable Pin** in its menu, to add a pin
+- Drag a pin to move it
+- Right-click a pin and choose **Delete Cable Pin**, or select it and press Delete
+
+Pins attached to a case move with the case.
+
+## Adjusting controls
+
+- **Knobs** — drag vertically (up increases, down decreases)
+- **Sliders** — drag along the slider
+- **Toggle switches and buttons** — click to step to the next named state
+
+All control values are stored per patch.
+
+## Screen images
+
+Hover over a screen to show its toolbar:
+
+<figure markdown="span">
+  ![Screen hover toolbar](../images/patch-editor/screen_toolbar.png){ width="150" }
+</figure>
+
+- **+** — attach an image
+- **Magnifier** — show the current image enlarged
+- **Trash** — delete the current image
+- **← / →** — cycle through images, when a screen has more than one
+
+Attaching an image opens a dialog. By default the whole image is used. Check **Crop Image** to show a crop rectangle, and **Lock Aspect Ratio** to keep it to the screen's shape.
+
+<figure markdown="span">
+  ![Screen image dialog with cropping enabled](../images/patch-editor/screen_image_dialog.webp){ width="500" }
+  <figcaption>Cropping a module photo to just its display.</figcaption>
+</figure>
+
+## Notes
+
+**Patch point notes** — right-click a patch point with no cables and choose **Add Patch Point Note** or **Edit Patch Point Note**. A dot marks the patch point; hover over it to read the note.
+
+<figure markdown="span">
+  ![Patch point note tooltip](../images/patch-editor/point_note.png){ width="340" }
+</figure>
+
+**Module notes** — right-click the module body (not over a patch point) and choose **Add Note** to place a free-form note on the panel.
+
+Both kinds of note are stored per patch.
+
+## Groups
+
+Groups color-highlight sets of modules. Turn on the **Groups** toggle to show the overlays and the floating group list.
+
+<figure markdown="span">
+  ![Groups and patch point numbers turned on](../images/patch-editor/groups_numbers.webp)
+  <figcaption>Groups and Numbers turned on. Hovering a group card highlights its modules.</figcaption>
+</figure>
+
+With the Groups toggle on:
+
+- **Create a group** — right-click a module and choose **New Group with *name***. Shift+Right-click to add more modules to the selection first.
+- **Add or remove modules** — right-click a module and use **Add to Group** or **Remove from Group**
+- **Hover a group card** — highlights that group's modules and fades the rest
+- **Click a group card** — frames the group's modules
+- **Right-click a group card** — rename, edit notes, or delete the group
+
+## Patch notes
+
+Each patch has free-form notes and an optional audio preview. The notes appear in an overlay at the top of the canvas when the **Notes** toggle is on, Hover over the overlay to show a play button when audio is attached.
+
+<figure markdown="span">
+  ![Patch notes overlay](../images/patch-editor/notes_overlay.png){ width="600" }
+</figure>
+
+Click the overlay, choose **Patch Notes…** from the canvas or patch list menu, or use **Patches > Patch Notes…** to edit them. **Attach Audio Preview** adds an audio file to the patch.
+
+<figure markdown="span">
+  ![Patch Notes sheet](../images/patch-editor/notes_sheet.webp){ width="410" }
+</figure>
 
 ## Canvas navigation
 
 - **Scroll wheel or pinch** — zoom (0.25×–5.0×)
 - **Drag on empty space** — pan
 - **Frame to Fit** — fits all cases to the viewport (Cmd+0 or toolbar button)
+
+## Saving
+
+Changes start an edit session with a **Discard Edits / Save Changes** bar at the bottom of the canvas.

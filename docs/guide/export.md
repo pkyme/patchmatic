@@ -2,14 +2,24 @@
 
 ## Print to PDF
 
-Press **Cmd+P** (or **File > Print Patch…**) while in Patches or Sets mode to open the print dialog.
+Press **Cmd+P** (or **File > Print Patch…**) in Patches or Sets mode to open the print dialog. Use the **PDF** menu in the dialog to save a PDF instead of printing.
+
+<figure markdown="span">
+  ![Print dialog with the PDF menu open](../images/export/print_dialog.webp){ width="560" }
+</figure>
 
 The output includes:
-- Patch name and rack name as a header
-- Patch notes (if any)
-- The full rack canvas with all modules rendered at their current knob values
-- All cables for the current patch
-- Patch point sequence numbers (if the Numbers toggle is on)
-- Control labels (always shown in print, regardless of the Labels toggle)
 
-Page orientation is set automatically — landscape if the rack content is wider than tall, portrait otherwise. Content is scaled to fit the page with 18pt margins. Use the system print dialog to save as PDF instead of sending to a printer.
+- The patch name and rack name as a header
+- Patch notes, if any
+- The full rack with every module drawn at its current control values
+- All cables in the patch
+- Patch point sequence numbers, if the Numbers toggle is on
+- Control labels, always shown in print regardless of the Labels toggle
+
+<figure markdown="span">
+  ![Exported PDF of a patch](../images/export/pdf.webp)
+  <figcaption>The exported PDF, landscape because the rack is wider than it is tall.</figcaption>
+</figure>
+
+Page orientation is chosen automatically: landscape if the rack is wider than it is tall, portrait otherwise. The content is scaled to fit the page with 18 pt margins.

@@ -1,35 +1,55 @@
 # Getting Started
 
-Patchmatic is organized into four modes, selectable from the toolbar at the top of the window: **Modules**, **Racks**, **Patches**, and **Sets**. The typical workflow moves through them in that order.
+Patchmatic is organized into four modes, selected from the switcher at the top of the window or with Cmd+1 to Cmd+4. The typical workflow moves through them in order.
+
+<figure markdown="span">
+  ![Mode switcher](images/getting-started/mode_switcher.png){ width="320" .strip }
+</figure>
 
 ## 1. Create a module
 
-Switch to **Modules** mode. Click the camera icon button in the library toolbar to import a photo of your hardware module. Patchmatic will offer to detect controls automatically from the image. Review the results and adjust as needed.
+Switch to **Modules**. Click the camera button in the window toolbar to import a photo of your hardware module; Patchmatic offers to detect its controls automatically. To start from a blank panel, click **+** instead.
 
-To create a blank module instead, use the **+** button.
+<figure markdown="span">
+  ![Modules mode](images/module-editor/overview.webp)
+</figure>
 
-See [Module Editor](guide/module-editor.md) for full details.
+See [Module Editor](guide/module-editor.md).
 
 ## 2. Build a rack
 
-Switch to **Racks** mode. Create a rack, add a case, configure its row width, and add rows. Drag modules from the strip at the bottom of the canvas into rows.
+Switch to **Racks**. Create a rack, configure its case, and drag modules from the strip at the bottom of the canvas into the rows.
 
-See [Rack Editor](guide/rack-editor.md) for full details.
+<figure markdown="span">
+  ![Racks mode](images/rack-editor/overview.webp)
+</figure>
+
+See [Rack Editor](guide/rack-editor.md).
 
 ## 3. Create a patch
 
-Switch to **Patches** mode. Click the **+** button and select a rack to create a patch for it. Drag from one patch point to another to draw a cable.
+Switch to **Patches**. Click **+** in the patch list and choose a rack. Drag from one patch point to another to draw a cable.
 
-Each patch independently stores cable connections, knob positions, notes, and other state.
+Each patch stores its own cables, control positions, notes, groups, and screen images.
 
-See [Patch Editor](guide/patch-editor.md) for full details.
+<figure markdown="span">
+  ![Patches mode](images/patch-editor/overview.webp)
+</figure>
+
+See [Patch Editor](guide/patch-editor.md).
 
 ## 4. Organize into sets
 
-Switch to **Sets** mode to group patches into an ordered list. Use the arrow keys or navigation buttons to step through them.
+Switch to **Sets** to arrange patches into an ordered list and step through them.
 
-See [Sets](guide/sets.md) for full details.
+<figure markdown="span">
+  ![Sets mode](images/sets/overview.webp)
+</figure>
+
+See [Sets](guide/sets.md).
 
 ## Saving changes
 
-When you make changes in the Module or Rack editors, a Save/Discard toolbar appears at the bottom of the canvas. You must explicitly save before switching away, or you will be prompted to save or discard your changes.
+Edits in Modules, Racks, and Patches mode start an edit session. A **Discard Edits / Save Changes** bar appears at the bottom of the canvas until you choose one. If you switch to another module, rack, patch, or mode with unsaved changes, Patchmatic asks whether to save or discard them first.
+
+All edits support Undo and Redo (Cmd+Z / Cmd+Shift+Z).
