@@ -1,0 +1,44 @@
+import Foundation
+
+@Observable
+final class PatchSet: Codable, Identifiable, Hashable {
+    var id: UUID
+    var name: String
+    var patchIDs: [UUID]
+
+    init(id: UUID = UUID(), name: String = "New Set", patchIDs: [UUID] = []) {
+        self.id = id
+        self.name = name
+        self.patchIDs = patchIDs
+    }
+
+    // MARK: - Codable
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, patchIDs
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        patchIDs = try container.decode([UUID].self, forKey: .patchIDs)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(patchIDs, forKey: .patchIDs)
+    }
+
+    // MARK: - Hashable
+
+    static func == (lhs: PatchSet, rhs: PatchSet) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

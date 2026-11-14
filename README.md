@@ -81,6 +81,33 @@ Patchmatic is MacOS application for recording your Eurorack patches, a bit like 
 
 ---
 
+## Building from Source
+
+Requires Xcode 26 or later.
+
+```sh
+git clone https://github.com/pkyme/patchmatic.git
+cd patchmatic
+./scripts/fetch_model.sh   # optional: control detection model (126 MB)
+open Patchmatic/Patchmatic.xcodeproj
+```
+
+To sign with your own Apple developer account, create `Patchmatic/Config/Local.xcconfig` with `DEVELOPMENT_TEAM = <your team ID>`. Without the model the app builds and runs, but importing a panel photo detects no controls. Run the tests with:
+
+```sh
+xcodebuild -project Patchmatic/Patchmatic.xcodeproj -scheme Patchmatic -destination platform=macOS CODE_SIGNING_ALLOWED=NO test
+```
+
+The control detection model is an [RF-DETR](https://github.com/roboflow/rf-detr) model fine-tuned on photos of Eurorack panels. It is distributed pre-trained; the training code and data are not included.
+
+---
+
 ## Acknowledgements
 
 Patchmatic uses [ONNX Runtime](https://onnxruntime.ai/) for on-device model inference and [RF-DETR](https://github.com/roboflow/rf-detr) for the control detection model. Licenses for both are included in the application.
+
+---
+
+## License
+
+Patchmatic is released under the [MIT License](LICENSE).

@@ -1,0 +1,35 @@
+name: Build and test
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - docs/**
+      - mkdocs.yml
+  pull_request:
+
+jobs:
+  build-and-test:
+    # Needs Xcode 26 or later (Swift 6.2, file-system-synchronized groups)
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      # The detection model is not needed: without it the app builds and image
+      # detection is unavailable.
+      - name: Build for macOS
+        run: >
+          xcodebuild -project Patchmatic/Patchmatic.xcodeproj -scheme Patchmatic
+          -configuration Debug -destination platform=macOS
+          CODE_SIGNING_ALLOWED=NO build
+      - name: Build for iPad
+        run: >
+          xcodebuild -project Patchmatic/Patchmatic.xcodeproj -scheme Patchmatic
+          -configuration Debug -destination generic/platform=iOS
+          CODE_SIGNING_ALLOWED=NO build
+      - name: Test
+        run: >
+          xcodebuild -project Patchmatic/Patchmatic.xcodeproj -scheme Patchmatic
+          -destination platform=macOS CODE_SIGNING_ALLOWED=NO test
