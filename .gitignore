@@ -1,1 +1,30 @@
+# Docs site build output
 site/
+
+# Detection model: downloaded with scripts/fetch_model.sh, published as a GitHub release asset
+Patchmatic/Models/eurorack-controls.onnx
+
+# Local signing settings (team ID, bundle ID override); see Patchmatic/Config/Signing.xcconfig
+Patchmatic/Config/Local.xcconfig
+
+# Build products
+builds/
+*.dmg
+
+# Xcode
+xcuserdata/
+DerivedData/
+*.xcworkspace
+*.backup
+*.bak
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Claude
+.claude/

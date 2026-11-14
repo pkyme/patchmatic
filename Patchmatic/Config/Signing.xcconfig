@@ -1,0 +1,14 @@
+// Signing settings shared by the app and test targets.
+//
+// To sign with your own Apple developer account, create Local.xcconfig next to this
+// file (it is git-ignored) and set, for example:
+//
+//   DEVELOPMENT_TEAM = ABCDE12345
+//   PATCHMATIC_BUNDLE_ID = com.example.patchmatic
+//
+// Without a team, build with CODE_SIGNING_ALLOWED=NO or choose a team in Xcode.
+
+DEVELOPMENT_TEAM =
+PATCHMATIC_BUNDLE_ID = com.patchmatic.app
+
+#include? "Local.xcconfig"
