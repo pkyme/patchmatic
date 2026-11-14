@@ -49,6 +49,10 @@
 | Cmd+R | Rename patch |
 | Cmd+D | Duplicate patch |
 | Delete | Delete selected cables or pin |
+| Cmd+C | Copy selected cables |
+| Cmd+V | Paste cables |
+| Shift+Click cable | Add or remove cable from selection |
+| Shift+Drag | Marquee-select cables |
 | Cmd+Click cable | Insert cable pin at click location |
 
 ## Sets Mode

@@ -39,5 +39,6 @@ nav:
     - Patch Editor: guide/patch-editor.md
     - Sets: guide/sets.md
     - Export: guide/export.md
+    - iPad: guide/ipad.md
   - Reference:
     - Keyboard Shortcuts: reference/keyboard-shortcuts.md

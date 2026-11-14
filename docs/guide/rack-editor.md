@@ -23,7 +23,9 @@ Modules are placed from the **module strip** at the bottom of the canvas. Drag a
 
 Placement rules:
 - A 3U module can only be placed in a 3U row; a 1U module only in a 1U row
-- The module must fit within the available HP space in the row
+- The row must have enough free HP for the module
+
+If a single module is dropped onto modules already in the row, the overlapping modules are pushed aside to make room: those whose centre is left of the dropped module move left, the rest move right. The new positions are previewed while dragging.
 
 To remove a module, select it and press Delete, or right-click and choose **Delete**.
 

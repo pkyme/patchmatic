@@ -19,6 +19,7 @@ Patchmatic is a macOS application for recording your Eurorack patches — a mix 
 - Draw cables between any two patch points, across cases
 - Physics-based cable rendering with color selection
 - Route cables with intermediate pin points
+- Copy and paste cables between patches on the same rack
 - Add notes to patch points, modules, and patches
 - Group modules with color-coded labels
 - Multiple patches per rack
@@ -29,10 +30,14 @@ Patchmatic is a macOS application for recording your Eurorack patches — a mix 
 **Export**
 - Print or export patches to PDF
 
+**iPad**
+- Browse sets on iPad, synced from the Mac through an iCloud Drive folder
+
 ## Requirements
 
 - macOS 14.0 (Sonoma) or later
 - Apple Silicon or Intel
+- iPad app: iPadOS 17.0 or later
 
 ## Installation
 

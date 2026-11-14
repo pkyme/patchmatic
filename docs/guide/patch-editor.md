@@ -6,6 +6,12 @@ A patch is a snapshot of a rack: it stores cable connections, control positions,
 
 In **Patches** mode, click **+** in the patch list. A submenu lists all racks — click a rack name to create a patch for it. The patch opens showing the rack layout.
 
+## Duplicating and deleting patches
+
+**Cmd+D** (or **Duplicate** in the patch list context menu) creates a copy of the patch, including cables, control values, screen images, notes, groups, patch notes, and audio.
+
+To delete a patch, use **Patches > Delete Patch…** or **Delete…** in the patch list context menu. A confirmation is shown first, noting if the patch will also be removed from any sets. Deletion can be undone with **Edit > Undo**, which restores the patch and its set membership.
+
 ## Drawing cables
 
 Drag from a patch point to another patch point to create a cable. A preview cable is shown while dragging. The cable is created when you release over a valid target. Colors are auto-assigned from the 24-color palette in round-robin order.
@@ -15,9 +21,18 @@ To change a cable's color, right-click the cable and select **Change Color**, th
 ## Selecting and deleting cables
 
 - Right-click a cable to select it and show its context menu
-- Shift+Click to add a cable to the selection
+- Shift+Click a cable to add it to or remove it from the selection
+- Shift+Drag to draw a marquee; every cable it touches is added to the selection (when the Groups toggle is off)
 - Right-click a patch point to select all cables connected to it
 - Delete selected cables with the Delete key or via the context menu
+
+The canvas context menu also has a **Delete Cable** submenu listing every cable by its endpoints, in the form "Module Jack → Module Jack". A patch point without a label is shown by its sequence number.
+
+## Copying and pasting cables
+
+Copy selected cables with **Cmd+C**, **Copy Selected Cables** in the cable context menu, or **Patches > Copy Cables**. Paste them with **Cmd+V**, **Paste Cables** in the canvas or cable context menu, or **Patches > Paste Cables**.
+
+Cables can only be pasted into a patch on the same rack they were copied from. Pasted cables become the selection. Cables whose modules are no longer in the rack, or that duplicate an existing connection, are skipped.
 
 ## Routing cables with pins
 
@@ -38,7 +53,7 @@ Pins attached to a case move with the case when it is repositioned.
 **Toggle switches and buttons** — click to advance to the next state, cycling through all named states.
 
 **Screens** — hover over a screen to reveal a toolbar:
-- **+** — attach an image (cropped to the control's aspect ratio)
+- **+** — attach an image. By default the whole image is used. Check **Crop Image** to show a crop rectangle, and **Lock Aspect Ratio** to constrain it to the screen's aspect ratio.
 - **← / →** — cycle through multiple attached images
 - **Magnifier** — zoom the current image
 - **✕** — delete the current image
