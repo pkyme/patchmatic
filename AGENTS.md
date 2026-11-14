@@ -80,7 +80,7 @@ Files are picked up from the folder automatically; no project file edits are nee
 - **Codable compatibility**: `PatchmaticDocument.currentSchemaVersion` must be incremented for changes older builds can't read. New model fields must be optional or decoded with `decodeIfPresent` and a default. All model enums use raw `String` values. Keep existing coding keys when renaming properties (e.g. `Patch.moduleNotes` is stored as `notes`).
 - Screen controls store absolute point dimensions (`screenWidth`/`screenHeight`), unlike other controls which use normalized positions and a size scale.
 - Mutators call `prepareEdit()` only after their guards pass, so no-ops don't create undo steps.
-- `EditableText` uses an `NSEvent` monitor for double-click detection because SwiftUI gesture modifiers break `List` selection.
+- `EditableText` starts a rename when an already-selected `List` row is clicked, Finder-style, by observing `mouseDown` in a background `NSView`; SwiftUI gesture modifiers on row content break `List` selection.
 
 ## Common tasks
 
