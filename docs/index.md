@@ -1,3 +1,8 @@
+---
+title: Eurorack patch documentation for macOS
+description: "Patchmatic is a free, open-source macOS app for documenting Eurorack modular synth patches: design module panels, build racks, draw cables and organise patches into sets."
+---
+
 <p align="center"><img src="Icon.png" width="96" alt="Patchmatic icon"></p>
 
 # Patchmatic

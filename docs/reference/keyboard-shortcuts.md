@@ -1,3 +1,7 @@
+---
+description: "Keyboard shortcuts for every mode in Patchmatic, the Eurorack patch documentation app for macOS."
+---
+
 # Keyboard Shortcuts
 
 ## Global

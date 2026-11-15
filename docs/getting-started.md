@@ -1,3 +1,7 @@
+---
+description: "Get started with Patchmatic: create a Eurorack module, build a rack, patch it with cables and organise patches into sets."
+---
+
 # Getting Started
 
 Patchmatic is organized into four modes, selected from the switcher at the top of the window or with Cmd+1 to Cmd+4. The typical workflow moves through them in order.

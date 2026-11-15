@@ -1,3 +1,7 @@
+---
+description: "Document Eurorack patches in Patchmatic: draw cables between patch points, set knob positions, route cables with pins and add notes."
+---
+
 # Patch Editor
 
 A patch is a snapshot of a rack: it stores cable connections, control positions, notes, groups, and screen images independently from every other patch on the same rack. You can have as many patches per rack as you like.

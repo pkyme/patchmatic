@@ -1,3 +1,7 @@
+---
+description: "Assemble Eurorack modules into cases with 1U and 3U rows at any HP width, and arrange multiple cases in one rack."
+---
+
 # Rack Editor
 
 The Rack Editor is where you assemble module definitions into a physical case layout.

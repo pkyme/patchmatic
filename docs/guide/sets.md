@@ -1,3 +1,7 @@
+---
+description: "Organise Eurorack patches into ordered sets for live performance and step through them in Patchmatic."
+---
+
 # Sets
 
 A set is an ordered list of patches — a live performance running order, or a sequence of related configurations to step through.

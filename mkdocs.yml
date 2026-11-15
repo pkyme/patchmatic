@@ -1,5 +1,6 @@
 site_name: Patchmatic
-site_description: A tool for logging Eurorack patches.
+site_url: https://pkyme.github.io/patchmatic/
+site_description: Patchmatic is a free, open-source macOS app for documenting Eurorack modular synth patches, racks and modules, with an iPad viewer.
 repo_url: https://github.com/pkyme/patchmatic
 repo_name: patchmatic
 

@@ -1,3 +1,7 @@
+---
+description: "Print Eurorack patch sheets or save them as PDF from Patchmatic, with the full rack, cables and patch notes."
+---
+
 # Export
 
 ## Print to PDF

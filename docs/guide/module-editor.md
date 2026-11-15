@@ -1,3 +1,7 @@
+---
+description: "Design Eurorack module panels in Patchmatic, with automatic detection of knobs, jacks and switches from a panel photo."
+---
+
 # Module Editor
 
 The Module Editor is where you define the layout of individual Eurorack modules. Each module definition is a reusable template that can be placed into any number of racks.

@@ -1,3 +1,7 @@
+---
+description: "View your Eurorack patch sets on iPad with Patchmatic, synced from the Mac through an iCloud Drive folder."
+---
+
 # iPad
 
 Patchmatic for iPad lets you browse your sets on stage or at the rack. It reads the library from a sync folder in iCloud Drive that the Mac app writes to. The iPad never modifies the library; all editing happens on the Mac.
