@@ -4,13 +4,15 @@
 
 <h1 align="center">Patchmatic</h1>
 
-<p align="center">A tool for logging eurorack patches.</p>
+<p align="center">A free, open-source macOS app for documenting Eurorack modular synth patches, with an iPad viewer.</p>
+
+<p align="center"><a href="https://pkyme.github.io/patchmatic/"><strong>User Guide</strong></a> · <a href="../../releases">Download</a></p>
 
 ---
 
 ## Overview
 
-Patchmatic is MacOS application for recording your Eurorack patches, a bit like a mix of Modulargrid and VCV Rack without the audio. The name comes from 'Patch Schematic' and the original idea was for a tool that let you create easy to read schematics of patches, to enable efficient repatching.
+Patchmatic is a macOS application for recording your Eurorack patches, a bit like a mix of Modulargrid and VCV Rack without the audio. The name comes from 'Patch Schematic' and the original idea was for a tool that let you create easy to read schematics of patches, to enable efficient repatching.
 
 ## Features
 
@@ -78,6 +80,8 @@ Patchmatic is MacOS application for recording your Eurorack patches, a bit like 
 2. **Build a rack** — create a case, add rows, place modules at HP positions
 3. **Patch** — switch to Patches mode, drag cables between patch points
 4. **Save presets** — each patch stores cable layout and all control positions independently
+
+The [user guide](https://pkyme.github.io/patchmatic/) covers every mode in detail, starting with [Getting Started](https://pkyme.github.io/patchmatic/getting-started/).
 
 ---
 
